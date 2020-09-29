@@ -1,0 +1,377 @@
+<html>
+<head>
+<meta charset="utf-8" />
+
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+<script src="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js"></script>
+<link href="https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css" rel="stylesheet" />
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css" type="text/css"/>
+<!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 -->
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+
+<link href="assets/img/teamlogo.png" rel="icon">
+<link href="assets/img/teamlogo.png" rel="teamlogo">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+<!-- Vendor CSS Files -->
+<!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+<link href="css/bootstrap.css" rel="stylesheet">
+
+
+
+
+<!-- Template Main CSS File -->
+<link href="css/style.css" rel="stylesheet">
+<style>
+    #logocenter
+            {
+              margin-top: 0px;
+              margin-left: 400px;
+width: 139px;
+height: 36px;
+/* background: transparent url('img/logo.png') 0% 0% no-repeat padding-box; */
+opacity: 1;
+            }
+
+            .section1{
+              margin-top: 30px;
+            }
+            #section2{
+              top: 221px;
+left: 251px;
+width: 423px;
+height: 43px;
+text-align: left;
+font: normal normal normal 13px/15px Lato;
+letter-spacing: 0.16px;
+color: #232323;
+opacity: 1;
+            }
+
+            .default {
+   
+    background-color:  #37AAE1;
+    color: white;
+    border: none;
+}
+.cont{
+  padding-top: 130px;
+  padding-left: 330px;
+  padding-right: 200px;
+  background: #EEEEEE 0% 0% no-repeat padding-box;
+opacity: 1;
+/* width: 600px;
+height: 64px; */
+}
+#agentpic{
+  /* padding-top: 202px !important; */
+  margin-left: 100px;
+  width: 100px;
+  height: 100px;
+  /* background: transparent url('img/agent.png') 0% 0% no-repeat padding-box; */
+  opacity: 1
+}
+.whole{
+  background: white;
+}
+.header1{
+  top: 205px;
+  /* margin-left: 100px; */
+width: 122px;
+height: 19px;
+  text-align: left;
+font: normal normal bold 13px/16px Lato;
+letter-spacing: 0px;
+color: #232323;
+opacity: 1;
+}
+
+.header2{
+  top: 221px;
+  /* margin-left: 0px; */
+width: 423px;
+height: 43px;
+text-align: left;
+font: normal normal normal 13px/15px Lato;
+letter-spacing: 0.16px;
+color: #232323;
+opacity: 1;
+}
+.header3{
+  top: 268px;
+  /* margin-left: 100px; */
+width: 423px;
+height: 18px;
+text-align: left;
+font: normal normal bold 13px/16px Lato;
+letter-spacing: 0.2px;
+color: #232323;
+opacity: 1;
+}
+
+.header4{
+  top: 290px;
+  /* margin-left: 100px; */
+width: 422px;
+height: 55px;
+text-align: left;
+font: normal normal normal 13px/18px Lato;
+letter-spacing: 0.07px;
+opacity: 1;
+}
+.section4 {
+  /* padding-top: 372px; */
+  margin-left: 100px;
+width: 1140px;
+height: 362px;
+/* background: transparent url('img/house.png') 0% 0% no-repeat padding-box; */
+
+opacity: 1;
+}
+.section7{
+  padding-bottom: 40px;
+}
+.header5{
+  top: 746px;
+  margin-left: 115px;
+width: 276px;
+height: 28px;
+text-align: left;
+font: normal normal normal 19px/15px Lato;
+letter-spacing: 0px;
+color: #232323;
+opacity: 1;
+}
+.header6{
+  top: 786px;
+  margin-left: 100px;
+width: 276px;
+height: 28px;
+
+text-align: left;
+font: normal normal bold 14px/15px Lato;
+letter-spacing: 0.14px;
+color: #000000;
+opacity: 1;
+}
+.header7{
+  top: 786px;
+  margin-left: 300px;
+width: 196px;
+height: 28px;
+text-align: left;
+font: normal normal bold 14px/15px Lato;
+letter-spacing: 0.42px;
+color: #232323;
+opacity: 1;
+}
+.header8{
+  top: 820px;
+  margin-left: 100px;
+width: 320px;
+height: 75px;
+text-align: left;
+font: normal normal normal 13px/16px Lato;
+letter-spacing: 0px;
+color: #232323;
+opacity: 1;
+}
+.header9{
+  top: 820px;
+  margin-left: 300px;
+width: 195px;
+height: 51px;
+text-align: left;
+letter-spacing: NaNpx;
+color: #232323;
+opacity: 1;
+}
+.button{
+  top: 901px;
+  margin-left: 100px;
+width: 165px;
+height: 42px;
+border: none;
+/* background: var(---37aae1-blue-2) 0% 0% no-repeat padding-box; */
+background: #37AAE1 0% 0% no-repeat padding-box;
+opacity: 1;
+text-align: center;
+font: normal normal normal 14px/16px Lato;
+letter-spacing: 0px;
+color: #FFFFFF;
+opacity: 1
+}
+
+.footer{
+  margin-top: 30px;
+ 
+  margin-left: 200px;
+padding-bottom: 30px;
+width: 628px;
+height: 19px;
+text-align: center;
+font: normal normal normal 12px/15px Lato;
+letter-spacing: 0.11px;
+/* color: #8C8C8C; */
+opacity: 1;
+}
+.footer1{
+  top: 1013px;
+  margin-left: 200px;
+padding-bottom: 50px;
+
+width: 628px;
+height: 21px;
+text-align: center;
+font: normal normal bold 12px/15px Lato;
+letter-spacing: 0px;
+/* color: #8C8C8C; */
+opacity: 1;
+}
+.section6{
+  margin-top: 200px;
+}
+</style>
+<div class="cont">
+  <div class="whole">
+          <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #37AAE1;">
+              <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+                        
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <div id="logocenter">
+                  <li class="nav-item active">
+                    <img src="img/logo.png" style="width: 230px; height: 60px;">
+                  </li>
+                    </div>
+                  
+                </ul>
+              
+              </div>
+            </nav>
+         <body>
+
+  
+    <div class="section1">
+    <div class="row">
+     
+      <div class="col-lg-4">
+        <div id="agentpic">
+          <img src="img/agent.png">
+        </div>
+       
+      </div>
+      <div class="col-lg-8">
+        <div class="row">
+          <div class="header1">
+            <p>Hi John,</p>
+          </div>
+         
+        </div>
+        <div class="row">
+          <div class="header2">
+          <p>Insert your message here vestibulum fringilla sem sit amet temus condimentum. Aenean pharetra sapien quis mauris condimentum felis.</p>
+        </div></div>
+        <div class="row">
+          <div class="header3">
+            <p>Kind Regards,</p>
+          </div>
+         
+        </div>
+        <div class="row">
+          <div class="header4">
+            <p>Agent Name agentname@dgproperty.com.au <br>0400 000 000</p>
+          </div>
+         
+        </div>
+        
+        
+      </div>
+   
+    </div>
+  </div>
+
+  <div class="section4">
+    <div data-aos="fade-in">
+      
+    </div>
+    <img src="img/house.png" style="width: 800px;">
+  </div>
+
+  
+   
+      
+   
+ 
+  
+  <div class="section6">
+    <div class="row">
+      <div class="header5">
+        <p>123 Sample Street, SUBURB</p>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="header6">
+        <p>Heading</p>
+        </div>
+      </div>
+     <div class="col-lg-8">
+      <div class="header7">
+       <p>For Sale $XXX,XXX</p>
+      </div>
+       
+     </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="header8">
+        <p>Property description elit eget. Aenan imperdiet. Aenean imperdiet. Suspendisse feugiat. Phasellus magna. Preasent porttitor, nulla vitae posuere iaculis, arcu nisl dignissim dolor, a pretium mi sem ut ipsum.</p>
+      </div>
+    </div>
+     <div class="col-lg-8">
+     <div class="header9">
+      <p>Contact Agent Name 0400 000 000</p>
+     </div>
+      
+       
+     </div>
+    
+  </div>
+    
+  </div>
+
+  <div class="section7">
+    <div class="row">
+      <div class="col-lg-2">
+        <button class="button">View More</button>
+      </div>
+    </div>
+    
+</div>
+  
+
+ </body>
+</div>
+
+<div class="footer">
+  <p>Copyright © DG Property. All Rights Reserved.</p>
+</div>
+
+<div class="footer1">
+  <p>Unsubscribe from our emails</p>
+</div>
+</div>
+
+
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.js"></script>
+
+
+</head>
+</html>
